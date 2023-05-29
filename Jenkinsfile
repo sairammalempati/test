@@ -9,12 +9,12 @@ pipeline {
 	   }
 	   stage('Build Image') {
 	        steps {
-	        sh 'sudo -S Buddi@9216 docker build -t mynlpmodel:v1 .'
+	        sh 'sudo -S -P Buddi@9216 docker build -t mynlpmodel:v1 .'
 	        }
 	   }
 	   stage('Run Image') {
 	        steps {
-	        sh 'sudo -S Buddi@9216 docker run -d -p 5000:4000 --name nlpmodel mynlpmodel:v1'
+	        sh 'sudo -S -P Buddi@9216 docker run -d -p 5000:4000 --name nlpmodel mynlpmodel:v1'
 	        }
 	   }
 	   stage('Testing'){
