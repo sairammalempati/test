@@ -9,7 +9,7 @@ COPY . /__init__.py
 RUN pip install -r requirements.txt
 
 Expose 4000 
-ENTRYPOINT ["PYTHON"]
+ENTRYPOINT ["python3"]
 
 
 CMD ["__init__.py"]
